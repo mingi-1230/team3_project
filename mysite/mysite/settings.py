@@ -17,10 +17,6 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-import pymysql
-# pymysql django ORM 연동
-pymysql.install_as_MySQLdb()
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -43,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap4',
+    'emotion',
+    'account',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -91,7 +90,7 @@ DATABASES = {
          'USER': 'cloud3', # 데이터베이스 계정
          'PASSWORD':'cloud3', # 계정 비밀번호
     #     # 'HOST':'localhost', # 데이테베이스 IP
-         'HOST':'54.241.98.7',
+         'HOST':'54.219.122.234',
          'PORT':'3306', # 데이터베이스 port
      }
 }
@@ -131,7 +130,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-#STATIC_URL = 'static/'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [

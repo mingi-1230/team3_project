@@ -26,5 +26,8 @@ urlpatterns = [
     path('table/', include('main_app.table.urls')),
     path('notifications/', include('main_app.notifications.urls')),
     path('typography/', include('main_app.typography.urls')),
-   # path('maps/',include('main_app.maps.urls')),
+    path('emotion/', include('emotion.urls'), name='emotion'),
+    path('maps/', include('main_app.maps.urls')),
+    path('account/', include('account.urls'))
+    # path('maps/',include('main_app.maps.urls')),
 ]

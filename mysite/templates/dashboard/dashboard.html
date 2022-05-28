@@ -1,9 +1,9 @@
-<!doctype html>
 {% load static %}
+<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="{% static 'img/favicon.ico' %}>
+	<link rel="icon" type="image/png" href="{% static 'img/favicon.ico' %}">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>Light Bootstrap Dashboard by Creative Tim</title>
@@ -151,7 +151,7 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                           <a href="">
+                           <a href="/account/join">
                                <p>Account</p>
                             </a>
                         </li>
@@ -190,14 +190,19 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card">
-
+                            <div class="container">
+                                <form method="POST" action="{% url 'emotion:predict' %}" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    {{ form }}
+                                    <input type="submit" class="btn btn-primary col-12" value="제출">
+                                </form>
+                            </div>
                             <div class="header">
-                                <h4 class="title">Email Statistics</h4>
-                                <p class="category">Last Campaign Performance</p>
+                                <h4 class="title"></h4>
+                                <p class="category"></p>
                             </div>
                             <div class="content">
-                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
-
+                                <img style="max-width: 100%; object-fit: cover;" src="{% static "foo.png" %}" alt=""/>
                                 <div class="footer">
                                     <div class="legend">
                                         <i class="fa fa-circle text-info"></i> Open

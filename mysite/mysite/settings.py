@@ -91,7 +91,7 @@ DATABASES = {
          'USER': 'cloud3', # 데이터베이스 계정
          'PASSWORD':'cloud3', # 계정 비밀번호
     #     # 'HOST':'localhost', # 데이테베이스 IP
-         'HOST':'54.241.98.7',
+         'HOST':'54.215.185.52',
          'PORT':'3306', # 데이터베이스 port
      }
 }
